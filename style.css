@@ -1,0 +1,206 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    box-sizing: border-box;
+    font-size: 10px;
+    background: #ffc600;
+    font-family: 'Amatic SC', cursive;
+}
+
+.container{
+    padding-top: 50px;
+}
+
+h1{
+    text-align: center;
+    font-size: 10em;
+    line-height: 1;
+    margin-bottom: 30px;
+}
+
+.menu{
+    text-align: center;
+}
+
+.menu label{
+    font-size: 4em;
+    position: relative;
+}
+
+.menu input{
+    height: 50px;
+    vertical-align: middle;
+    font-size: 18px;
+    padding: 0 10px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.difficult-level{
+    margin: 0 auto;
+    display: block;
+    width: 180px;
+    height: 26px;
+    font-style: italic;
+    font-weight: 600;
+    font-family: cursive;
+    background-color: gold;
+    outline: none;
+}
+
+.game {
+    width: 600px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+}
+.finish, .table-res{
+    position: absolute;
+    height: auto;
+    top: 100px;
+    left: 25%;
+    display: none;
+    z-index: 5;
+}
+
+.finish:before,
+.table-res:before{
+    position: fixed;
+    content: '';
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: .6;
+    z-index: -1;
+}
+
+.finish-result{
+    background-color: #ffc600;
+    padding: 90px;
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    border: black dashed 5px;
+}
+
+.finish-result h2{
+    text-align: center;
+    font-size: 4em;
+    margin-bottom: 30px;
+}
+
+.finish-result h3{
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+.result-list li{
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.close-popup, .close-table{
+    font-size: 0 !important;
+    line-height: 0 !important;
+    width: 20px;
+    height: 20px;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    z-index: 2;
+    cursor: pointer;
+    outline: none;
+}
+
+.btn-icon{
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    line-height: 1 !important;
+    font-size: 16px !important;
+    font-family: "Font Awesome 5 Free", sans-serif;
+    font-weight: 900;
+    color: #000;
+}
+
+.btn-icon:before{
+    content:"\f00d";
+}
+
+.hole {
+    flex: 1 0 33.33%;
+    position: relative;
+    overflow: hidden;
+}
+
+.hole::after {
+    content: '';
+    display: block;
+    background: url(img/dirt.svg) bottom center no-repeat;
+    width: 100%;
+    height: 70px;
+    background-size: contain;
+    z-index: 2;
+    position: absolute;
+    bottom: -30px;
+}
+
+.mole {
+    background: url(img/mole.svg) bottom center no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: 50%;
+    top: 100%;
+    transition: top 600ms;
+}
+
+.hole.up .mole {
+    top: 0;
+}
+
+.start, .btn-rating {
+    font-family: 'Amatic SC', cursive;
+    font-size: 5em;
+    background: #986a24;
+    color: white;
+    font-weight: 500;
+    margin: 12px 5px -4px;
+    cursor: pointer;
+    border: black dashed 5px;
+    outline: none;
+}
+
+.error-message{
+    display: none;
+    color: #990000;
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    top: 2px;
+}
+
+.table{
+    border: 2px solid black;
+}
+
+.table tbody td,
+.table thead th{
+    padding: 10px;
+    text-align: center;
+}

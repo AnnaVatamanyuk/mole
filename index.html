@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.10.1/css/all.css" integrity="sha384-wxqG4glGB3nlqX0bi23nmgwCSjWIW13BdLUEYC4VIMehfbcro/ATkyDsF/AbIOVe" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+    <title>Title</title>
+</head>
+<body>
+<div class="container">
+    <h1>Whack a mole! <span class="score">0</span></h1>
+    <div class="menu">
+        <label>Введите имя:
+            <input id="name" type="text">
+            <span class="error-message">(*Введите имя игрока)</span>
+        </label>
+        <label>
+            <select class="difficult-level">
+                <option value="light">light</option>
+                <option value="medium">medium</option>
+                <option value="hard">hard</option>
+            </select>
+        </label>
+        <button class="start">Start game!</button>
+        <button class="btn-rating">Rating game</button>
+    </div>
+    <div class="game">
+        <div class="hole hole1">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole2">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole3">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole4">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole5">
+            <div class="mole"></div>
+        </div>
+        <div class="hole hole6">
+            <div class="mole"></div>
+        </div>
+    </div>
+</div>
+<div class="finish">
+    <div class="finish-result">
+        <h2>Game Over</h2>
+        <h3 class="name-user">Results of the game for - </h3>
+        <ul class="result-list">
+            <li>Total moles - <span class="total-moles"></span></li>
+            <li>Caught moles - <span class="caught-moles"></span></li>
+        </ul>
+        <button class="close-popup"><span class="btn-icon"></span></button>
+    </div>
+</div>
+<div class="finish table-res">
+    <div class="finish-result">
+        <h2>Rating table</h2>
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Level</th>
+                <th>Total moles</th>
+                <th>Caught moles</th>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+        <button class="close-table"><span class="btn-icon"></span></button>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
